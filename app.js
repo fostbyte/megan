@@ -1,5 +1,5 @@
 /**
- * MEGAN FOSTER - SUPPLY CHAIN PORTFOLIO
+ * MEGAN FOSTER - TRANSPOCO STYLE PORTFOLIO
  * Client-side interactive enhancements
  */
 
@@ -10,30 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Scroll Progress & Header Scroll State
+  // 2. Header Scroll State
   const header = document.getElementById('header');
-  const scrollProgress = document.getElementById('scroll-progress');
-
-  const updateScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-
-    if (scrollProgress) {
-      scrollProgress.style.width = `${scrollPercent}%`;
-    }
-
-    if (header) {
-      if (scrollTop > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+  const handleScroll = () => {
+    if (!header) return;
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
   };
-
-  window.addEventListener('scroll', updateScroll, { passive: true });
-  updateScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 
   // 3. Mobile Navigation Menu Toggle
   const mobileToggle = document.getElementById('mobile-toggle');
@@ -57,32 +45,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Smooth Active Navigation Link Highlight on Scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  // 4. Transpoco Experience Tabs Interaction
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
 
-  const highlightNav = () => {
-    const scrollPos = window.scrollY + 180;
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-tab');
 
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
+      // Update button states
+      tabButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      // Update panel visibility
+      if (target === 'all') {
+        // Show boutique as default or all
+        tabPanels.forEach(p => p.classList.remove('active'));
+        const firstPanel = document.getElementById('panel-boutique');
+        if (firstPanel) firstPanel.classList.add('active');
+      } else {
+        tabPanels.forEach(p => {
+          if (p.id === `panel-${target}`) {
+            p.classList.add('active');
           } else {
-            link.classList.remove('active');
+            p.classList.remove('active');
           }
         });
       }
     });
-  };
+  });
 
-  window.addEventListener('scroll', highlightNav, { passive: true });
+  // 5. Transpoco Accordion ("Take Control of Operations")
+  const accordionItems = document.querySelectorAll('.transpoco-accordion-item');
 
-  // 5. Toast Notification System
+  accordionItems.forEach(item => {
+    const trigger = item.querySelector('.accordion-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all items
+      accordionItems.forEach(otherItem => {
+        otherItem.classList.remove('open');
+        const otherTrigger = otherItem.querySelector('.accordion-trigger');
+        const otherIcon = otherItem.querySelector('.acc-icon');
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        if (otherIcon) otherIcon.textContent = '+';
+      });
+
+      // If it wasn't open, open it
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+        const icon = item.querySelector('.acc-icon');
+        if (icon) icon.textContent = '–';
+      }
+    });
+  });
+
+  // 6. Toast Notification System
   const toast = document.getElementById('toast');
   let toastTimeout = null;
 
@@ -97,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2800);
   };
 
-  // 6. Copy to Clipboard Functionality
+  // 7. Copy to Clipboard Functionality
   const copyButtons = document.querySelectorAll('[data-copy]');
   copyButtons.forEach(btn => {
     btn.addEventListener('click', async (e) => {
@@ -109,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
         await navigator.clipboard.writeText(textToCopy);
         showToast(`Copied to clipboard: ${textToCopy}`);
       } catch (err) {
-        // Fallback for older browsers
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
@@ -121,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Contact Form Handling
+  // 8. Contact Form Handling
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
@@ -131,52 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const name = contactForm.querySelector('#form-name').value.trim();
       const email = contactForm.querySelector('#form-email').value.trim();
-      const subject = contactForm.querySelector('#form-subject').value.trim() || 'Supply Chain Inquiry';
+      const subject = contactForm.querySelector('#form-subject').value.trim() || 'Supply Chain Internship Opportunity';
       const message = contactForm.querySelector('#form-message').value.trim();
 
       if (!name || !email || !message) {
         formStatus.textContent = 'Please fill out all required fields.';
-        formStatus.className = 'form-status error';
+        formStatus.className = 'form-status-msg error';
         return;
       }
 
-      // Prepare mailto link with pre-filled subject and body
       const mailtoUrl = `mailto:mfoster2@usf.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       )}`;
 
       formStatus.innerHTML = `Opening your email client to send to <strong>mfoster2@usf.edu</strong>...`;
-      formStatus.className = 'form-status success';
+      formStatus.className = 'form-status-msg success';
 
       showToast('Opening email client...');
       
       setTimeout(() => {
         window.location.href = mailtoUrl;
       }, 700);
-    });
-  }
-
-  // 8. Intersection Observer for Scroll Reveals
-  const revealElements = document.querySelectorAll('.card-glass, .pillar-card, .metric-col, .edu-card');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-      observer.observe(el);
     });
   }
 });
