@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megan Foster | Supply Chain Management & Operations</title>
+  <meta name="description" content="Portfolio of Megan Foster - Junior studying Supply Chain Management at the University of South Florida (USF). Experienced in small business leadership, procurement, inventory control, and logistics.">
+  <meta name="keywords" content="Megan Foster, Supply Chain Management, USF, Procurement, Inventory Control, Logistics, Tampa Florida">
+  <meta name="author" content="Megan Foster">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Megan Foster | Supply Chain Management & Operations">
+  <meta property="og:description" content="USF Supply Chain Management student with proven small business ownership, procurement, and inventory control experience.">
+  <meta property="og:image" content="pictures/profile-placeholder.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="brand-initial">MF</span>
+        <span class="brand-text">Megan Foster<span class="accent-dot">.</span></span>
+      </a>
+
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="docs/Megan_Foster_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="nav-resume-btn">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn btn-sm btn-primary">Let's Connect</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="docs/Megan_Foster_Resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-link resume-highlight">Download PDF Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="ambient-glow ambient-glow-1"></div>
+      <div class="ambient-glow ambient-glow-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill animate-fade-in" id="status-pill">
+            <span class="status-indicator"></span>
+            <span>Open to Supply Chain &amp; Operations Internships</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in delay-1">
+            Driving Efficiency in <span class="gradient-text">Supply Chains</span> &amp; Operations
+          </h1>
+
+          <p class="hero-subtitle animate-fade-in delay-2">
+            Junior studying <strong>Supply Chain Management</strong> at the <strong>University of South Florida (USF)</strong>. Combining entrepreneurial small business leadership with proven expertise in end-to-end procurement, inventory par levels, and high-volume logistics.
+          </p>
+
+          <div class="hero-cta-group animate-fade-in delay-3">
+            <a href="#contact" class="btn btn-lg btn-primary" id="hero-contact-btn">
+              <span>Get in Touch</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="docs/Megan_Foster_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-glass" id="hero-resume-btn">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <div class="quick-contact-row animate-fade-in delay-4">
+            <div class="quick-contact-item">
+              <svg class="icon text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Tampa, Florida</span>
+            </div>
+            <div class="quick-contact-item">
+              <svg class="icon text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:mfoster2@usf.edu" class="hover-underline">mfoster2@usf.edu</a>
+              <button class="btn-copy-small" data-copy="mfoster2@usf.edu" title="Copy email address" aria-label="Copy email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Showcase Card -->
+        <div class="hero-visual animate-fade-in delay-2">
+          <div class="profile-card-wrapper">
+            <div class="profile-card">
+              <div class="profile-image-container">
+                <!-- Replaceable Photo in pictures/ folder -->
+                <img src="pictures/profile-placeholder.svg" alt="Megan Foster Profile" class="profile-img" id="hero-profile-image" loading="eager">
+                <div class="image-swap-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <span>Photo file: pictures/profile-placeholder.svg</span>
+                </div>
+              </div>
+
+              <div class="profile-meta">
+                <div class="profile-meta-top">
+                  <div>
+                    <h3 class="profile-name">Megan Foster</h3>
+                    <p class="profile-role">USF Supply Chain • Class of 2028</p>
+                  </div>
+                  <span class="badge badge-usf">USF Bulls 🤘</span>
+                </div>
+
+                <div class="profile-metrics-grid">
+                  <div class="metric-mini">
+                    <span class="metric-num">$4.5K</span>
+                    <span class="metric-lbl">Monthly Rev Built</span>
+                  </div>
+                  <div class="metric-mini">
+                    <span class="metric-num">200+</span>
+                    <span class="metric-lbl">SKUs Controlled</span>
+                  </div>
+                  <div class="metric-mini">
+                    <span class="metric-num">100%</span>
+                    <span class="metric-lbl">On-Time Fulfill</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="float-badge float-badge-left">
+              <span class="badge-icon">📦</span>
+              <div>
+                <strong class="badge-title">End-to-End Sourcing</strong>
+                <span class="badge-sub">Domestic &amp; Global Fabrics</span>
+              </div>
+            </div>
+
+            <div class="float-badge float-badge-right">
+              <span class="badge-icon">📊</span>
+              <div>
+                <strong class="badge-title">Zero Stockouts</strong>
+                <span class="badge-sub">FIFO &amp; POS Par Audits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlights Bar -->
+      <div class="container">
+        <div class="metrics-banner">
+          <div class="metric-col">
+            <span class="big-metric">$4,500</span>
+            <span class="metric-caption">Recurring Monthly Revenue Managed</span>
+          </div>
+          <div class="metric-col">
+            <span class="big-metric">200+</span>
+            <span class="metric-caption">Apparel SKUs in Active Catalog</span>
+          </div>
+          <div class="metric-col">
+            <span class="big-metric">0</span>
+            <span class="metric-caption">Missed Customer Deadlines</span>
+          </div>
+          <div class="metric-col">
+            <span class="big-metric">500+</span>
+            <span class="metric-caption">Guests Coordinated per Event</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Bridging Theory With Real-World Execution</h2>
+          <p class="section-description">
+            A practical mindset developed through business ownership and fast-paced operational environments.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio-card card-glass">
+            <div class="quote-icon" aria-hidden="true">“</div>
+            <p class="bio-text-lead">
+              I am a Junior looking for an internship while studying Supply Chain Management at USF, combining hands-on small business ownership with high-volume operational experience.
+            </p>
+            <p class="bio-text">
+              Proven track record sourcing domestic and international materials, managing end-to-end production runs, and controlling inventory par levels in fast-paced environments. Detail-driven and adaptable, seeking to apply vendor management and logistical coordination to an impactful supply chain.
+            </p>
+
+            <div class="about-keypoints">
+              <div class="keypoint-item">
+                <div class="keypoint-icon">🎯</div>
+                <div>
+                  <strong>Target Role:</strong>
+                  <span>Supply Chain, Procurement, Logistics, or Inventory Planning Internships</span>
+                </div>
+              </div>
+              <div class="keypoint-item">
+                <div class="keypoint-icon">📍</div>
+                <div>
+                  <strong>Location Preference:</strong>
+                  <span>Tampa Bay Area, Remote, or Hybrid opportunities</span>
+                </div>
+              </div>
+              <div class="keypoint-item">
+                <div class="keypoint-icon">🎓</div>
+                <div>
+                  <strong>Academic Track:</strong>
+                  <span>Bachelor of Supply Chain Management — University of South Florida (Est. Spring 2028)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon bg-emerald-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Procurement &amp; Global Sourcing</h3>
+                <p class="pillar-desc">
+                  Directing end-to-end purchasing, evaluating domestic &amp; international fabric suppliers, negotiating costs, and locking down 3-week lead times.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-cyan-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Inventory Control &amp; FIFO Auditing</h3>
+                <p class="pillar-desc">
+                  Enforcing strict First-In First-Out rotation, cycle counting, par level forecasting, and POS reconciliation to eliminate shrinkage and spoilage.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon bg-indigo-glow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div class="pillar-content">
+                <h3 class="pillar-title">Material Flow &amp; Staging Logistics</h3>
+                <p class="pillar-desc">
+                  Eliminating bottlenecks between warehouse/back-of-house and front line staging, coordinating 500+ guest galas with zero material shortages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title">Operational &amp; Entrepreneurial Experience</h2>
+          <p class="section-description">
+            Hands-on accountability managing revenues, direct reports, inventories, and client commitments.
+          </p>
+        </div>
+
+        <div class="experience-list">
+          <!-- Experience 1: Teeny Theenys Boutique -->
+          <article class="experience-card card-glass" id="exp-boutique">
+            <div class="exp-grid">
+              <div class="exp-media">
+                <div class="exp-image-wrap">
+                  <img src="pictures/teeny-theenys-boutique.svg" alt="Teeny Theenys Boutique Sourcing and Operations" class="exp-img" loading="lazy">
+                  <span class="photo-hint-badge">📁 pictures/teeny-theenys-boutique.svg</span>
+                </div>
+                <div class="exp-stats-mini">
+                  <div class="stat-bubble">
+                    <strong>$4,500/mo</strong>
+                    <span>Recurring Rev</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>200 SKUs</strong>
+                    <span>Apparel Catalog</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>100%</strong>
+                    <span>On-Time Fulfill</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exp-details">
+                <div class="exp-header-row">
+                  <div>
+                    <span class="exp-badge">Founder &amp; Entrepreneurship</span>
+                    <h3 class="exp-role">Founder and CEO</h3>
+                    <h4 class="exp-company">Teeny Theenys Boutique</h4>
+                  </div>
+                  <div class="exp-date-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Aug 2019 – May 2023</span>
+                  </div>
+                </div>
+
+                <p class="exp-summary">
+                  Launched and scaled an e-commerce apparel business from the ground up, spearheading all supply chain operations, supplier sourcing, catalog inventory, and fulfillment execution.
+                </p>
+
+                <ul class="exp-bullets">
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>End-to-End Procurement:</strong> Directed domestic and international sourcing of specialized fabrics and seamless design files.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Production &amp; Revenue:</strong> Managed production workflows and distribution to deliver an average of 40 custom units monthly, generating $4,500 in recurring monthly revenue.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Zero Lead-Time Slippage:</strong> Reliably fulfilled custom orders within a tight 3-week lead time, maintaining zero missed customer delivery deadlines.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Catalog &amp; Inventory Control:</strong> Directed inventory control, cycle counting, and finished-goods fulfillment across an active catalog of nearly 200 apparel SKUs.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Team Leadership:</strong> Supervised a 3-person team directing daily workflows to achieve and maintain a 100% on-time fulfillment rate.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="tag">Global Sourcing</span>
+                  <span class="tag">SKU Management</span>
+                  <span class="tag">Lead Time Optimization</span>
+                  <span class="tag">Quality Assurance</span>
+                  <span class="tag">Team Leadership</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 2: Stolis -->
+          <article class="experience-card card-glass" id="exp-stolis">
+            <div class="exp-grid">
+              <div class="exp-media">
+                <div class="exp-image-wrap">
+                  <img src="pictures/inventory-logistics.svg" alt="Stolis Inventory and Operations" class="exp-img" loading="lazy">
+                  <span class="photo-hint-badge">📁 pictures/inventory-logistics.svg</span>
+                </div>
+                <div class="exp-stats-mini">
+                  <div class="stat-bubble">
+                    <strong>FIFO</strong>
+                    <span>Strict Rotation</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>100%</strong>
+                    <span>Health Code Pass</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>POS Audit</strong>
+                    <span>Revenue Integrity</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exp-details">
+                <div class="exp-header-row">
+                  <div>
+                    <span class="exp-badge">Inventory &amp; Operations</span>
+                    <h3 class="exp-role">Bartender &amp; Inventory Control</h3>
+                    <h4 class="exp-company">Stolis</h4>
+                  </div>
+                  <div class="exp-date-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Apr 2018 – Nov 2022</span>
+                  </div>
+                </div>
+
+                <p class="exp-summary">
+                  Maintained strict material control and front-line service in a high-turnover hospitality venue, ensuring zero stockouts and comprehensive revenue balancing.
+                </p>
+
+                <ul class="exp-bullets">
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>High-Volume Inventory Control:</strong> Managed stock levels for high-volume service bar ensuring complete operational readiness with zero stockouts during rush periods.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Demand Forecasting:</strong> Analyzed historical consumption trends to accurately forecast weekly product usage and replenishment orders.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>FIFO Rotation Standards:</strong> Enforced strict First-In, First-Out (FIFO) rotation standards for perishable ingredients and high-value stock, minimizing spoilage and maintaining 100% health code compliance.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>POS Auditing &amp; Integrity:</strong> Audited POS transactional data and daily sales figures, reconciling cash and credit balances with high accuracy to protect revenue integrity.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="tag">Inventory Forecasting</span>
+                  <span class="tag">FIFO Rotation</span>
+                  <span class="tag">POS Auditing</span>
+                  <span class="tag">Loss Prevention</span>
+                  <span class="tag">Quality Compliance</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Experience 3: Ameristar -->
+          <article class="experience-card card-glass" id="exp-ameristar">
+            <div class="exp-grid">
+              <div class="exp-media">
+                <div class="exp-image-wrap">
+                  <img src="pictures/event-logistics.svg" alt="Ameristar Banquet and Event Logistics" class="exp-img" loading="lazy">
+                  <span class="photo-hint-badge">📁 pictures/event-logistics.svg</span>
+                </div>
+                <div class="exp-stats-mini">
+                  <div class="stat-bubble">
+                    <strong>500+</strong>
+                    <span>Guest Galas</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>Zero</strong>
+                    <span>Shortages</span>
+                  </div>
+                  <div class="stat-bubble">
+                    <strong>BEO</strong>
+                    <span>Par Reconciliation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exp-details">
+                <div class="exp-header-row">
+                  <div>
+                    <span class="exp-badge">Logistics &amp; Staging</span>
+                    <h3 class="exp-role">Banquet Server &amp; Event Logistics</h3>
+                    <h4 class="exp-company">Ameristar</h4>
+                  </div>
+                  <div class="exp-date-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>July 2016 – Nov 2018</span>
+                  </div>
+                </div>
+
+                <p class="exp-summary">
+                  Executed large-scale banquet staging and synchronized service for premier corporate galas and private banquets.
+                </p>
+
+                <ul class="exp-bullets">
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>High-Volume Staging:</strong> Coordinated logistical staging and banquet execution for corporate events and private galas accommodating up to 500+ guests, consistently meeting tight service timelines.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>Material Flow Optimization:</strong> Managed floor layouts, equipment staging, and material flow between back-of-house kitchens and primary event spaces to eliminate service bottlenecks during peak rushes.</span>
+                  </li>
+                  <li>
+                    <span class="bullet-arrow">→</span>
+                    <span><strong>BEO Par Auditing:</strong> Audited Banquet Event Orders (BEOs) and inventory requisitions, cross-referencing headcounts, dietary requirements, and specialty supply par levels to prevent material shortages.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-tags">
+                  <span class="tag">Event Staging</span>
+                  <span class="tag">Material Flow</span>
+                  <span class="tag">Bottleneck Elimination</span>
+                  <span class="tag">BEO Auditing</span>
+                  <span class="tag">Par Level Tracking</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-description">
+            Building rigorous quantitative foundation in supply chain systems and analytics.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <!-- USF -->
+          <div class="edu-card card-glass primary-edu">
+            <div class="edu-badge-top">Current Program</div>
+            <div class="edu-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="edu-content">
+              <span class="institution-name">University of South Florida (USF)</span>
+              <h3 class="degree-title">Bachelor of Supply Chain Management</h3>
+              <p class="edu-timeline">Estimated Graduation: <strong>Spring 2028</strong> • Tampa, FL</p>
+              
+              <div class="edu-highlights">
+                <span class="edu-pill">Supply Chain Strategy</span>
+                <span class="edu-pill">Procurement &amp; Logistics</span>
+                <span class="edu-pill">Operations Analysis</span>
+                <span class="edu-pill">Inventory Theory</span>
+              </div>
+
+              <div class="edu-media-preview">
+                <img src="pictures/usf-campus.svg" alt="USF Campus Graphic" class="edu-img" loading="lazy">
+                <span class="photo-hint-badge">📁 pictures/usf-campus.svg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hillsborough College -->
+          <div class="edu-card card-glass">
+            <div class="edu-icon-wrap secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="edu-content">
+              <span class="institution-name">Hillsborough College</span>
+              <h3 class="degree-title">Associate in Arts</h3>
+              <p class="edu-timeline">Academic Period: <strong>2025 – 2026</strong> • Tampa, FL</p>
+              
+              <div class="edu-highlights">
+                <span class="edu-pill">Business Foundations</span>
+                <span class="edu-pill">Applied Mathematics</span>
+                <span class="edu-pill">Economics</span>
+                <span class="edu-pill">Communications</span>
+              </div>
+
+              <div class="transfer-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                <span>Foundation pathway to USF Bachelor's degree program</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Skills &amp; Expertise</h2>
+          <p class="section-description">
+            Hands-on competencies validated across operations, small business management, and academic study.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Supply Chain & Operations -->
+          <div class="skill-category-card card-glass">
+            <div class="skill-cat-header">
+              <div class="cat-icon bg-emerald-glow">🚚</div>
+              <div>
+                <h3 class="cat-title">Procurement &amp; Sourcing</h3>
+                <span class="cat-subtitle">Supplier Management &amp; Sourcing</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Procurement &amp; Sourcing</span>
+                  <span class="skill-level">Core Strength</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Vendor &amp; Supplier Relations</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Domestic &amp; International Purchasing</span>
+                  <span class="skill-level">Experienced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Lead-Time Optimization</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Inventory & Analysis -->
+          <div class="skill-category-card card-glass">
+            <div class="skill-cat-header">
+              <div class="cat-icon bg-cyan-glow">📊</div>
+              <div>
+                <h3 class="cat-title">Inventory &amp; Analytics</h3>
+                <span class="cat-subtitle">Quantitative &amp; System Control</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Proficient in Excel (Analysis &amp; Tracking)</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Inventory Control &amp; Cycle Counting</span>
+                  <span class="skill-level">Core Strength</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>FIFO Standards &amp; Par Levels</span>
+                  <span class="skill-level">Expert</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 96%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>POS Transaction &amp; Sales Audits</span>
+                  <span class="skill-level">Experienced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Business & Leadership -->
+          <div class="skill-category-card card-glass">
+            <div class="skill-cat-header">
+              <div class="cat-icon bg-indigo-glow">💼</div>
+              <div>
+                <h3 class="cat-title">Business &amp; Leadership</h3>
+                <span class="cat-subtitle">Strategy &amp; Relationship Building</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Account Management</span>
+                  <span class="skill-level">Experienced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Strategic &amp; Social Selling</span>
+                  <span class="skill-level">Core Strength</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 93%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Brand Development</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 86%;"></div></div>
+              </li>
+              <li class="skill-item">
+                <div class="skill-item-info">
+                  <span>Business Research &amp; Critical Thinking</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 91%;"></div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card card-glass">
+          <div class="contact-grid">
+            <div class="contact-info-col">
+              <span class="section-tag">Let's Connect</span>
+              <h2 class="contact-title">Ready to bring efficiency and dedication to your team.</h2>
+              <p class="contact-lead">
+                I am actively seeking supply chain, operations, and logistics internship opportunities for upcoming terms. Feel free to reach out directly via email, phone, or this message form.
+              </p>
+
+              <div class="contact-details-list">
+                <!-- Email -->
+                <div class="contact-detail-row">
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Email Address</span>
+                    <a href="mailto:mfoster2@usf.edu" class="contact-detail-value" id="email-link">mfoster2@usf.edu</a>
+                  </div>
+                  <button class="btn-copy" data-copy="mfoster2@usf.edu" title="Copy email address" aria-label="Copy email">
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-detail-row">
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Phone Number</span>
+                    <a href="tel:6029088928" class="contact-detail-value" id="phone-link">(602) 908-8928</a>
+                  </div>
+                  <button class="btn-copy" data-copy="6029088928" title="Copy phone number" aria-label="Copy phone">
+                    <span>Copy</span>
+                  </button>
+                </div>
+
+                <!-- Location -->
+                <div class="contact-detail-row">
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-detail-label">Location</span>
+                    <span class="contact-detail-value">Tampa, Florida</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resume Download Action -->
+              <div class="resume-cta-block">
+                <a href="docs/Megan_Foster_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" id="contact-resume-download">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span>Download Official Resume (PDF)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Interactive Message Form -->
+            <div class="contact-form-col">
+              <form id="contact-form" class="contact-form" novalidate>
+                <h3 class="form-title">Send a Quick Message</h3>
+                <p class="form-desc">Inquiring about an internship or project? Drop a note below.</p>
+
+                <div class="form-group">
+                  <label for="form-name">Your Name</label>
+                  <input type="text" id="form-name" name="name" required placeholder="e.g. Sarah Jenkins" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email">Your Email or Organization</label>
+                  <input type="email" id="form-email" name="email" required placeholder="e.g. sjenkins@company.com" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" name="subject" placeholder="Supply Chain Internship Opportunity" class="form-input" value="Supply Chain Internship Opportunity">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Message</label>
+                  <textarea id="form-message" name="message" rows="4" required placeholder="Hi Megan, I reviewed your supply chain background and would like to discuss..." class="form-input form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                  <span>Send Message</span>
+                  <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-logo">Megan Foster</span>
+        <p class="footer-tagline">University of South Florida • B.S. Supply Chain Management (Est. 2028)</p>
+      </div>
+
+      <div class="footer-center">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#experience" class="footer-link">Experience</a>
+        <a href="#education" class="footer-link">Education</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">© <span id="current-year">2026</span> Megan Foster. All rights reserved.</p>
+        <p class="footer-note">All images stored in <code>pictures/</code> for easy replacement.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
