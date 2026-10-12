@@ -1,182 +1,112 @@
 /**
- * MEGAN FOSTER - TRANSPOCO STYLE PORTFOLIO
- * Client-side interactive enhancements
+ * PROSPECTUS PORTFOLIO - MEGAN FOSTER
+ * Interactive script: Palette switching, copy feedback, inquiry mailer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Current Year in Footer
+  // 1. Dynamic Year
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Header Scroll State
-  const header = document.getElementById('header');
-  const handleScroll = () => {
-    if (!header) return;
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
+  // 2. Palette Theme Switcher (Navy, Banknote, Charcoal)
+  const paletteButtons = document.querySelectorAll('.palette-btn');
+  const storedTheme = localStorage.getItem('prospectus-theme') || 'navy';
+
+  const setTheme = (themeName) => {
+    if (themeName === 'navy') {
+      document.documentElement.removeAttribute('data-theme');
     } else {
-      header.classList.remove('scrolled');
+      document.documentElement.setAttribute('data-theme', themeName);
     }
+    paletteButtons.forEach(btn => {
+      const isActive = btn.getAttribute('data-theme') === themeName;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+    localStorage.setItem('prospectus-theme', themeName);
   };
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
 
-  // 3. Mobile Navigation Menu Toggle
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  setTheme(storedTheme);
 
-  if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-    });
-
-    // Close menu when clicking any mobile link
-    const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      });
-    });
-  }
-
-  // 4. Transpoco Experience Tabs Interaction
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
-
-  tabButtons.forEach(btn => {
+  paletteButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-tab');
-
-      // Update button states
-      tabButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      // Update panel visibility
-      if (target === 'all') {
-        // Show boutique as default or all
-        tabPanels.forEach(p => p.classList.remove('active'));
-        const firstPanel = document.getElementById('panel-boutique');
-        if (firstPanel) firstPanel.classList.add('active');
-      } else {
-        tabPanels.forEach(p => {
-          if (p.id === `panel-${target}`) {
-            p.classList.add('active');
-          } else {
-            p.classList.remove('active');
-          }
-        });
+      const targetTheme = btn.getAttribute('data-theme');
+      if (targetTheme) {
+        setTheme(targetTheme);
+        showToast(`Theme switched to ${btn.getAttribute('title') || targetTheme}`);
       }
     });
   });
 
-  // 5. Transpoco Accordion ("Take Control of Operations")
-  const accordionItems = document.querySelectorAll('.transpoco-accordion-item');
-
-  accordionItems.forEach(item => {
-    const trigger = item.querySelector('.accordion-trigger');
-    if (!trigger) return;
-
-    trigger.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-
-      // Close all items
-      accordionItems.forEach(otherItem => {
-        otherItem.classList.remove('open');
-        const otherTrigger = otherItem.querySelector('.accordion-trigger');
-        const otherIcon = otherItem.querySelector('.acc-icon');
-        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
-        if (otherIcon) otherIcon.textContent = '+';
-      });
-
-      // If it wasn't open, open it
-      if (!isOpen) {
-        item.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
-        const icon = item.querySelector('.acc-icon');
-        if (icon) icon.textContent = '–';
-      }
-    });
-  });
-
-  // 6. Toast Notification System
+  // 3. Toast Notifications
   const toast = document.getElementById('toast');
-  let toastTimeout = null;
+  let toastTimer = null;
 
-  const showToast = (message) => {
+  function showToast(message) {
     if (!toast) return;
     toast.textContent = message;
     toast.classList.add('show');
-
-    if (toastTimeout) clearTimeout(toastTimeout);
-    toastTimeout = setTimeout(() => {
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
       toast.classList.remove('show');
-    }, 2800);
-  };
+    }, 2600);
+  }
 
-  // 7. Copy to Clipboard Functionality
+  // 4. One-Click Copy to Clipboard
   const copyButtons = document.querySelectorAll('[data-copy]');
   copyButtons.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
-      const textToCopy = btn.getAttribute('data-copy');
-      if (!textToCopy) return;
+      const val = btn.getAttribute('data-copy');
+      if (!val) return;
 
       try {
-        await navigator.clipboard.writeText(textToCopy);
-        showToast(`Copied to clipboard: ${textToCopy}`);
-      } catch (err) {
+        await navigator.clipboard.writeText(val);
+        showToast(`Copied to clipboard: ${val}`);
+      } catch {
         const textarea = document.createElement('textarea');
-        textarea.value = textToCopy;
+        textarea.value = val;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
         document.body.appendChild(textarea);
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
-        showToast(`Copied: ${textToCopy}`);
+        showToast(`Copied: ${val}`);
       }
     });
   });
 
-  // 8. Contact Form Handling
-  const contactForm = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
+  // 5. Fast Inquiry Form
+  const form = document.getElementById('inquiry-form');
+  const statusEl = document.getElementById('form-status');
 
-  if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (e) => {
+  if (form && statusEl) {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
-      const name = contactForm.querySelector('#form-name').value.trim();
-      const email = contactForm.querySelector('#form-email').value.trim();
-      const subject = contactForm.querySelector('#form-subject').value.trim() || 'Supply Chain Internship Opportunity';
-      const message = contactForm.querySelector('#form-message').value.trim();
+      const name = form.querySelector('#inquiry-name')?.value.trim();
+      const email = form.querySelector('#inquiry-email')?.value.trim();
+      const subject = form.querySelector('#inquiry-subject')?.value.trim() || 'Supply Chain Internship / Role Inquiry';
+      const message = form.querySelector('#inquiry-message')?.value.trim();
 
       if (!name || !email || !message) {
-        formStatus.textContent = 'Please fill out all required fields.';
-        formStatus.className = 'form-status-msg error';
+        statusEl.textContent = 'Please fill out all required fields.';
+        statusEl.className = 'form-status error';
         return;
       }
 
-      const mailtoUrl = `mailto:mfoster2@usf.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      )}`;
+      const bodyText = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+      const mailtoUrl = `mailto:mfoster2@usf.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
 
-      formStatus.innerHTML = `Opening your email client to send to <strong>mfoster2@usf.edu</strong>...`;
-      formStatus.className = 'form-status-msg success';
+      statusEl.textContent = 'Opening your email client to send to mfoster2@usf.edu...';
+      statusEl.className = 'form-status success';
+      showToast('Opening default email application...');
 
-      showToast('Opening email client...');
-      
       setTimeout(() => {
         window.location.href = mailtoUrl;
-      }, 700);
+      }, 600);
     });
   }
 });

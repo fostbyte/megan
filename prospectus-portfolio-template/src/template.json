@@ -1,0 +1,61 @@
+{
+  "id": "prospectus",
+  "name": "Prospectus",
+  "sections": [
+    "about",
+    "skills",
+    "stats",
+    "projects",
+    "services",
+    "experience",
+    "education",
+    "testimonials",
+    "highlights",
+    "contact"
+  ],
+  "palettes": [
+    {
+      "id": "navy",
+      "name": "Navy & cream",
+      "bg": "#f7f4ec",
+      "fg": "#14213d",
+      "accent": "#0f5d4a",
+      "muted": "#666b78",
+      "surface": "#ede8dc"
+    },
+    {
+      "id": "banknote",
+      "name": "Banknote",
+      "bg": "#f1f3ec",
+      "fg": "#1b2a22",
+      "accent": "#7a5c1e",
+      "muted": "#68716a",
+      "surface": "#e3e8dc"
+    },
+    {
+      "id": "charcoal",
+      "name": "Charcoal & gold",
+      "bg": "#151515",
+      "fg": "#ece8df",
+      "accent": "#d1a54a",
+      "muted": "#8b8780",
+      "surface": "#1e1e1e"
+    }
+  ],
+  "fonts": [
+    {
+      "id": "newsreader",
+      "name": "Newsreader + Plex",
+      "display": "\"Newsreader Variable\", Georgia, serif",
+      "text": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "mono": "\"IBM Plex Mono\", ui-monospace, monospace"
+    },
+    {
+      "id": "caslon",
+      "name": "Caslon + Plex",
+      "display": "\"Libre Caslon Text\", Georgia, serif",
+      "text": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "mono": "\"IBM Plex Mono\", ui-monospace, monospace"
+    }
+  ]
+}

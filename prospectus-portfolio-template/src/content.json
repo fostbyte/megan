@@ -1,0 +1,188 @@
+{
+  "name": "Megan Foster",
+  "professional_title": "Supply Chain Management · Operations & Procurement",
+  "location": "Tampa, Florida",
+  "availability": "Available for Summer 2026 & Immediate Internships",
+  "tagline": "Precision operations, inventory optimization, and vendor procurement built for high-velocity supply chains.",
+  "summary": [
+    "I am a Supply Chain Management student at the University of South Florida (USF) combining four years of founder-level small business operations with high-volume inventory replenishment and event logistics.",
+    "At Teeny Theenys Boutique, I directed domestic and global procurement of specialty fabrics, managed nearly 200 apparel SKUs, and maintained a 100% on-time fulfillment rate across 3-week custom lead times. My background bridges hands-on warehouse cycle counting and par-level enforcement with formal quantitative training in supply network modeling, linear programming, and ERP workflows."
+  ],
+  "email": "mfoster2@usf.edu",
+  "phone": "(602) 908-8928",
+  "linkedin": "https://www.linkedin.com/",
+  "website": "docs/Megan_Foster_Resume.pdf",
+  "skills": [
+    "Domestic & Global Sourcing",
+    "Inventory Par Levels & Cycle Counting",
+    "FIFO Rotation Compliance",
+    "Vendor Negotiation & Contracts",
+    "Lead-Time Reduction (3-Week Target)",
+    "Demand & Consumption Forecasting",
+    "Material Flow & Staging (500+ Guests)",
+    "POS Transaction & Sales Auditing",
+    "Advanced Microsoft Excel & Modeling",
+    "Shrinkage Minimization & Quality Control"
+  ],
+  "projects": [
+    {
+      "title": "Teeny Theenys Boutique — E-Commerce Supply Chain",
+      "year": "2019–2023",
+      "role": "Founder & Operations Lead",
+      "client": "$4.5K MRR · 100% On-Time",
+      "category": "Procurement & Sourcing",
+      "description": "Founded and scaled an e-commerce apparel business. Directed domestic and international fabric procurement, managed production of 40 custom units monthly, maintained strict cycle counts across 200 SKUs, and eliminated order slippage across 3-week lead times."
+    },
+    {
+      "title": "Stolis — High-Volume Inventory & Replenishment",
+      "year": "2018–2022",
+      "role": "Inventory Control & Operations",
+      "client": "0 Stockouts · 100% FIFO",
+      "category": "Inventory Management",
+      "description": "Controlled par levels and beverage inventory in a high-velocity service venue. Analyzed consumption velocity to forecast weekly replenishment orders, enforced strict First-In First-Out rotation on perishable stock, and reconciled daily POS ledgers."
+    },
+    {
+      "title": "Ameristar — Banquet Staging & Event Logistics",
+      "year": "2016–2018",
+      "role": "Event Logistics & Banquet Specialist",
+      "client": "500+ Guests · 0 Shortages",
+      "category": "Material Flow & Logistics",
+      "description": "Synchronized floor staging and material flow between back-of-house storage and dining ballrooms for 500+ attendee galas. Audited Banquet Event Orders (BEOs) and par requisitions to prevent shortages and service bottlenecks."
+    },
+    {
+      "title": "USF Operations Modeling & Optimization Projects",
+      "year": "2025–Present",
+      "role": "Supply Chain Analytics Track",
+      "client": "Class of 2028 · Muma College",
+      "category": "Academic Projects",
+      "description": "Conducted case studies in supply network design, EOQ safety stock calculations, demand forecasting, linear optimization modeling, and procurement strategy at USF Muma College of Business."
+    }
+  ],
+  "experience": [
+    {
+      "job_title": "Founder & CEO (Operations & Procurement)",
+      "company": "Teeny Theenys Boutique",
+      "location": "Tampa, FL",
+      "start_date": "2019",
+      "end_date": "2023",
+      "description": "Directed complete supply chain lifecycle from international fabric procurement to finished-goods distribution. Led a 3-person team maintaining 100% on-time delivery across nearly 200 SKUs."
+    },
+    {
+      "job_title": "Inventory Control & Bartender",
+      "company": "Stolis",
+      "location": "Tampa, FL",
+      "start_date": "2018",
+      "end_date": "2022",
+      "description": "Managed high-volume par levels and weekly stock replenishment. Enforced FIFO rotation standards to eliminate spoilage and reconciled daily POS transactional ledgers."
+    },
+    {
+      "job_title": "Banquet Server & Event Logistics Specialist",
+      "company": "Ameristar",
+      "location": "Tampa, FL",
+      "start_date": "2016",
+      "end_date": "2018",
+      "description": "Staged event equipment, table settings, and back-of-house material supply for 500+ attendee corporate galas. Audited BEO requisitions to prevent inventory shortages."
+    }
+  ],
+  "education": [
+    {
+      "school": "University of South Florida (USF) — Muma College of Business",
+      "degree": "Bachelor of Science in Supply Chain Management",
+      "start_date": "2026",
+      "end_date": "Est. 2028",
+      "description": "Tampa, FL · Junior Standing · Relevant Coursework: Supply Chain Analytics, Operations Management, Logistics Engineering, Business Decision Modeling, Principles of Procurement."
+    },
+    {
+      "school": "Hillsborough Community College",
+      "degree": "Associate in Arts",
+      "start_date": "2025",
+      "end_date": "2026",
+      "description": "Tampa, FL · Business administration foundations, applied calculus, macro/microeconomics, and managerial accounting."
+    }
+  ],
+  "services": [
+    {
+      "title": "Procurement & Sourcing",
+      "description": "End-to-end supplier identification, contract price negotiation, fabric and material specs verification, and transit lead-time management.",
+      "price": "Domestic & Global Sourcing"
+    },
+    {
+      "title": "Inventory Control & FIFO",
+      "description": "Quantitative safety stock calculations, First-In First-Out (FIFO) standards, routine cycle counts, shrinkage minimization, and POS inventory audits.",
+      "price": "200+ Active SKUs"
+    },
+    {
+      "title": "Logistics & Material Flow",
+      "description": "Bottleneck elimination, staging choreography, warehouse layout coordination, and cross-functional synchronisation under tight turnaround windows.",
+      "price": "500+ Guest Staging"
+    },
+    {
+      "title": "Demand Forecasting & Analytics",
+      "description": "Historical consumption trend modeling, Excel optimization (Pivot, VLOOKUP, Solver), replenishment schedules, and financial reconciliation.",
+      "price": "Excel & Data Modeling"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Megan’s vendor negotiations and inventory discipline kept deliveries completely on schedule without a single missed production deadline.",
+      "name": "Operations Advisor",
+      "role": "Teeny Theenys Boutique"
+    },
+    {
+      "quote": "Under high-volume pressure, Megan anticipates operational bottlenecks before they occur. Her staging and supply auditing are second to none.",
+      "name": "Banquet Director",
+      "role": "Ameristar Hospitality"
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Official Resume & Credentials (PDF)",
+      "detail": "Download complete curriculum vitae",
+      "year": "2026",
+      "url": "docs/Megan_Foster_Resume.pdf"
+    },
+    {
+      "title": "University of South Florida — Muma College of Business",
+      "detail": "Supply Chain & Operations Track",
+      "year": "2026–2028",
+      "url": "https://www.usf.edu/business/"
+    },
+    {
+      "title": "E-Commerce Sourcing & Lead-Time Standard Operating Procedures",
+      "detail": "Operational playbook for zero-slippage custom manufacturing",
+      "year": "2023",
+      "url": ""
+    }
+  ],
+  "stats": [
+    {
+      "value": "100%",
+      "label": "On-time fulfillment rate"
+    },
+    {
+      "value": "200+",
+      "label": "Active SKUs managed"
+    },
+    {
+      "value": "0",
+      "label": "Missed delivery deadlines"
+    },
+    {
+      "value": "500+",
+      "label": "Guest banquet capacity"
+    }
+  ],
+  "design": {
+    "palette": "navy",
+    "font": "newsreader",
+    "labels": {
+      "about": "The candidate",
+      "projects": "Track record",
+      "services": "Core operational competencies",
+      "experience": "Operational experience",
+      "education": "Qualifications & education",
+      "testimonials": "References & endorsements",
+      "highlights": "Credentials & highlights"
+    }
+  }
+}

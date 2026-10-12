@@ -1,51 +1,49 @@
-# Megan Foster - Supply Chain Portfolio
+# Megan Foster — Supply Chain Portfolio (Prospectus Edition)
 
-A clean, high-performance, single-page portfolio website for **Megan Foster**, Junior studying **Supply Chain Management** at the **University of South Florida (USF)**.
+A high-performance, editorial portfolio website for **Megan Foster**, Junior studying **Supply Chain Management** at the **University of South Florida (USF)**. Designed in the style of an institutional fund prospectus: key facts box, contents with dot leaders, track-record investment table, 6-cell operational competencies grid, and footnoted references.
 
-Live preview ready, optimized for Fortune 500 recruiters, and zero-config deployment to **Netlify**.
+Live preview ready, optimized for recruiters, and zero-config deployment to **Netlify**.
 
 ---
 
 ## 🚀 Features
 
-- **Supply Chain Focus**: Highlights procurement, inventory control (FIFO & par levels), high-volume logistics, and small business leadership.
-- **Rich Aesthetic Design**: Deep slate & obsidian theme with USF green/gold accents, frosted glass cards, and micro-interactions.
-- **One-Click Resume Access**: Direct links to download or view Megan's official resume (`docs/Megan_Foster_Resume.pdf`).
-- **Interactive Contact & Fast Copy**: One-click email & phone copying with toast feedback, plus a pre-formatted inquiry form.
-- **100% Responsive**: Tailored layout for mobile, tablet, and desktop screens with smooth navigation.
-- **Netlify Ready**: Zero-configuration static hosting configured with `netlify.toml`.
+- **Prospectus Aesthetic**: Editorial typography pairing Google Fonts `Newsreader` (serif headers & quotes), `IBM Plex Sans` (body), and `IBM Plex Mono` (dates, tabular metrics, and dot leaders).
+- **Interactive Palette Switcher**: Instant switching between:
+  - **Navy & Cream** (Default warm paper with deep navy and heritage USF green)
+  - **Banknote** (Financial paper with olive and bronze accents)
+  - **Charcoal & Gold** (Luxury dark mode)
+- **Key Facts Summary Box**: Quick-scan definition list detailing location, USF enrollment, 100% on-time fulfillment, 200+ managed SKUs, and immediate/summer internship availability.
+- **Track Record Table**: Tabular presentation of founder-level and operational engagements with quantifiable outcomes.
+- **One-Click Resume Access**: Direct links to download or view Megan's official resume ([`docs/Megan_Foster_Resume.pdf`](docs/Megan_Foster_Resume.pdf)).
+- **Fast Contact & Copy**: One-click copying for phone and email with toast feedback, plus a direct inquiry contact form.
+- **Print Optimization**: Clean `@media print` rules for generating a physical 2–3 page printed executive prospectus.
+- **Netlify Ready**: Zero-configuration static hosting configured with `netlify.toml` (publishing root `.`).
 
 ---
 
-## 🖼️ Swapping Placeholder Photos
+## 🛠️ Local Preview & Development
 
-All images are neatly organized inside the [`pictures/`](pictures/) folder with modern SVG placeholders. You can easily swap them out anytime:
-
-| Section | Placeholder File | Recommended File to Swap In |
-|---|---|---|
-| **Headshot** | `pictures/profile-placeholder.svg` | `pictures/profile.jpg` (or `.png`) |
-| **Boutique Sourcing** | `pictures/teeny-theenys-boutique.svg` | `pictures/teeny-theenys-boutique.jpg` |
-| **Inventory & FIFO** | `pictures/inventory-logistics.svg` | `pictures/inventory-logistics.jpg` |
-| **Event Logistics** | `pictures/event-logistics.svg` | `pictures/event-logistics.jpg` |
-| **USF / Education** | `pictures/usf-campus.svg` | `pictures/usf-campus.jpg` |
-
-> See [`pictures/README.md`](pictures/README.md) for detailed image dimension recommendations and instructions.
-
----
-
-## 🛠️ Local Development
-
-Open `index.html` directly in your browser, or start a local static server:
+### Static Website (Root)
+Open `index.html` directly in any web browser, or run a local server:
 
 ```bash
-# Using python
+# Python
 python3 -m http.server 8080
 
-# Or using npx serve
+# Or npx serve
 npx serve .
 ```
+Visit `http://localhost:8080`.
 
-Then visit `http://localhost:8080`.
+### React Template (`prospectus-portfolio-template/`)
+If you wish to run the template in React/Vite mode:
+
+```bash
+cd prospectus-portfolio-template
+npm install
+npm run dev
+```
 
 ---
 
@@ -58,7 +56,6 @@ npx netlify deploy --prod --dir=.
 
 ### Option 2: Connect via GitHub
 1. Push this repository to GitHub.
-2. In [Netlify Dashboard](https://app.netlify.com), click **Add new site** > **Import an existing project**.
-3. Select this GitHub repository.
-4. Set publish directory to `.` (already pre-configured in `netlify.toml`).
-5. Click **Deploy Site**.
+2. In [Netlify Dashboard](https://app.netlify.com), import this repository.
+3. Publish directory is preset to `.` in `netlify.toml`.
+4. Click **Deploy Site**.
